@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="/static/style_prenotazioni.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Elenco Prenotazioni</h1>
+        <table id="prenotazioni-tabella">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>N Persone</th>
+                    <th>Data</th>
+                    <th>Turno</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="{{ url_for('static', filename='script_modifica.js') }}"></script>
+    </body>
+</html>

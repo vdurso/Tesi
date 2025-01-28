@@ -1,0 +1,111 @@
+
+body, h1, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display:flex;
+    flex-direction:column;
+    font-family: Arial, sans-serif;
+    background-color: #b8c2a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.top-element {
+    width:100%;
+    position:fixed;
+    top:0;
+    background-color: #333;
+    color: #fff;
+    padding: 1px 0;
+}
+
+.widget-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top-element-inline-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.info-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.top-element-text {
+    margin-left: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+form#login-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height:170px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type="text"], input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #57e097;
+    box-shadow: 0 0 4px rgba(102, 234, 108, 0.5);
+}
+
+
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: darkgreen;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button[type="submit"]:hover {
+    background-color: white;
+    color:black;
+    border:2px solid black;
+    
+}
+
+
+@media (max-width: 400px) {
+    form#login-form {
+        width: 90%;
+    }
+}

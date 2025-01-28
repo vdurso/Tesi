@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_index.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script_index.js') }}"></script>
+    <title>Ristorante Fantasia</title>
+</head>
+<body>
+    <section class="top-element">
+        <div class="widget-container">
+            <ul class="top-element-inline-items">
+                <li class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="top-element-text">+39 089 201 920</span>
+                </li>
+                <li class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="top-element-text">info@ristorantefantasia.it</span>
+                </li>
+                <li class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="top-element-text">Lun-Dom 12:00 - 22:00</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="action-section">
+        <div class="action-container">
+            {% if logged_in %}
+                <a href="{{ url_for('form') }}">
+                    <button class="action-button">Prenota un tavolo</button>
+                </a>
+                <a href="{{ url_for('visualizza_modifica_prenotazioni')}}">
+                    <button class="action-button">Modifica Prenotazione</button>
+                </a>
+                <a href="{{ url_for('logout' )}}">
+                    <button id="logout-btn" class="action-button">Logout</button>
+                </a>
+            {% else %}
+                <a href="{{ url_for('login') }}">
+                    <button class="action-button">Accedi</button>
+                </a>
+                <a href="{{ url_for('registrazione') }}">
+                    <button class="action-button">Registrati</button>
+                </a>
+            {% endif %}
+        </div>
+    </section>
+    
+    <div class="image-grid">
+        <img src="{{ url_for('static', filename='images/piatti.jpg') }}">
+        <img src="{{ url_for('static', filename='images/spaghetti.jpeg') }}">
+        <img src="{{ url_for('static', filename='images/carne.jpeg') }}">
+        <img src="{{ url_for('static', filename='images/frutta.jpeg') }}">
+    </div>
+    
+    <section class="about-section">
+        <div class="about-container">
+            <h2>Chi Siamo</h2>
+            <h3>La nostra storia</h3>
+            <p>Il Ristorante Fantasia è un luogo dove la cucina tradizionale incontra la creatività. La nostra missione è offrire piatti freschi, autentici e preparati con ingredienti di qualità, per soddisfare ogni tipo di palato. Siamo orgogliosi della nostra accoglienza calorosa e dell'atmosfera familiare che troverete nel nostro locale.</p>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="menu-container">
+            <h2>Il Nostro Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-link active" data-menu="menu1">Menu</button>
+                <button class="tab-link" data-menu="vegetariano">Vegetariano</button>
+                <button class="tab-link" data-menu="pizza">Pizza</button>
+            </div>
+            <div class="menu-content">
+                <div id="menu1" class="menu-panel active">
+                    <img src = "{{url_for('static',filename = 'images/menu1.png')}}">
+                </div>
+                <div id="vegetariano" class="menu-panel">
+                    <img src="{{url_for('static', filename='images/vegetariano.png')}}">
+                </div>
+                <div id="pizza" class="menu-panel">
+                    <img src="{{url_for('static', filename='images/pizza.png')}}">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Cosa Dicono di Noi</h2>
+            <div class="review-slider">
+                <!-- Recensione 1 -->
+                <div class="review">
+                    <p class="review-text">"Un ristorante incredibile! Il cibo era delizioso e il servizio impeccabile. Tornerò sicuramente!"</p>
+                    <p class="review-author">- Mario Rossi</p>
+                </div>
+
+                <div class="review">
+                    <p class="review-text">"La qualità degli ingredienti e la cura nei dettagli si sente in ogni boccone. Assolutamente consigliato!"</p>
+                    <p class="review-author">- Laura Bianchi</p>
+                </div>
+
+                <div class="review">
+                    <p class="review-text">"Atmosfera accogliente e piatti straordinari. Perfetto per una serata speciale."</p>
+                    <p class="review-author">- Giuseppe Verdi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-container">
+            <p>&copy; 2025 Ristorante Fantasia - Tutti i diritti riservati</p>
+        </div>
+    </section>
+</body>
+</html>

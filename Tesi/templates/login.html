@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for ('static', filename='login.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <section class="top-element">
+        <div class="widget-container">
+            <ul class="top-element-inline-items">
+                <li class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="top-element-text">+39 089 201 920</span>
+                </li>
+                <li class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="top-element-text">info@ristorantefantasia.it</span>
+                </li>
+                <li class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="top-element-text">Lun-Dom 12:00 - 22:00</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <h1>Accedi per visualizzare le prenotazioni</h1>
+    <form id="login-form" method="POST">
+        <div id="row">
+            <label>Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div id="row">
+            <label>Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button type="submit">Accedi</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Reset generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b8c2a9;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: red;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+.form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+.input-container input[type="text"],
+.input-container input[type="number"],
+.input-container input[type="date"] {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.icon {
+    position:absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 1.2rem;
+}
+
+
+.turno-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+.turno-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+
+#input-btn button {
+    width: 100%;
+    padding: 12px;
+    background-color: darkgreen;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#input-btn button:hover {
+    background-color: white;
+    color:black;
+}
+
+
+.footer-section {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_visualizza.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+        <h1>Gestione Prenotazioni</h1>
+        <table id="tabella-prenotazioni">
+            <thead>
+                <tr>
+                    <th>ID Prenotazione</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Persone</th>
+                    <th>Data</th>
+                    <th>Turno</th>
+                    <th>Tavoli</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    <script src="{{url_for('static', filename = 'script_visualizza.js' )}}"></script>
+</body>
+</html>
